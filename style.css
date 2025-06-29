@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+}
+
+.screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.terminal {
+  width: 90%;
+  max-width: 800px;
+  background: #111;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px limegreen;
+  overflow: hidden;
+}
+
+.line {
+  font-size: 20px;
+  margin: 10px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #00ff00;
+  width: 0;
+  animation: typing 1.5s steps(30, end) forwards;
+}
+
+.final {
+  font-size: 28px;
+  color: #ff0000;
+  text-shadow: 0 0 10px red;
+}
+
+#trigger {
+  margin-top: 30px;
+  padding: 15px 40px;
+  font-size: 22px;
+  background: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px red;
+}
+
+#trigger:hover {
+  background: darkred;
+  transform: scale(1.05);
+}
+
+.hidden {
+  display: none;
+}
+
+.red {
+  color: #ff0000;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
